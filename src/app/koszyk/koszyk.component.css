@@ -1,0 +1,22 @@
+.koszyk {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-top: 2px dashed #aaa;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .koszyk button {
+    margin-left: 1rem;
+    padding: 0.4rem 1rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  
+  .koszyk button:hover {
+    background-color: #a71d2a;
+  }
+  

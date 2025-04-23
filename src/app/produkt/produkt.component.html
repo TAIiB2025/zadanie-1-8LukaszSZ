@@ -1,0 +1,24 @@
+<div [ngClass]="{'promocja': produkt.czyPromocja}">
+    <ng-container *ngIf="!zwiety; else tylkoNazwa">
+      <table>
+        <tr>
+          <td><strong>{{produkt.nazwa}}</strong></td>
+          <td>{{produkt.cena}} zl</td>
+          <td>{{produkt.dataUtworzenia | date:'dd.MM.yyyy'}}</td>
+          <td>
+            <button (click)="onDodaj()">Dodaj do koszyka</button>
+          </td>
+          <td>Sztuk: {{produkt.liczbaSztuk}}</td>
+        </tr>
+      </table>
+    </ng-container>
+  
+    <ng-template #tylkoNazwa>
+      <p><strong>{{produkt.nazwa}}</strong></p>
+    </ng-template>
+  
+    <button (click)="toggleWidok()">
+      {{zwiety ? 'Rozwin' : 'Zwin'}}
+    </button>
+  </div>
+  
